@@ -2,20 +2,21 @@
 <html>
 <body>
 
-<p>Creating a JavaScript Object.</p>
-
+<h1>Using JSON or JavaScript object notation</h1>
+<p>You can convert a string written in JSON format, into a JavaScript object.</p>
 <p id="demo"></p>
 
+
+
 <script>
-var vehicle = new Object();
-  vehicle.make = "Honda"
-  vehicle.model = "Accord"
-  vehicle.year = 2007
-  vehicle.color = "Red"
-  vehicle.engine = "V8";
+var vehicleJSON = '{"make":"Honda", "model":"Accord", "year":2007, "color":"Red", "engine":"V6"}';
+var vehicle = JSON.parse(vehicleJSON);
 
 document.getElementById("demo").innerHTML =
 "Manufacturer: " + vehicle.make + "<br>Model: " + vehicle.model + "<br>Year: " + vehicle.year + "<br>Engine: " + vehicle.engine + "<br>Color: " + vehicle.color;
+
+
+
 </script>
 
 </body>
